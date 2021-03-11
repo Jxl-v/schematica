@@ -6,8 +6,9 @@
 local Printer = {}
 
 do
-    local PLACE_BLOCK = game.ReplicatedStorage.Remotes.Functions.CLIENT_BLOCK_PLACE_REQUEST
-    local HIT_BLOCK = game.ReplicatedStorage.Remotes.Functions.CLIENT_BLOCK_HIT_REQUEST
+    local remotePath = game.ReplicatedStorage.rbxts_include.node_modules.net.out:FindFirstChild('_NetManaged') or game.ReplicatedStorage.Remotes.Functions
+    local PLACE_BLOCK = remotePath.CLIENT_BLOCK_PLACE_REQUEST
+    local HIT_BLOCK = remotePath.CLIENT_BLOCK_HIT_REQUEST
     local HEARTBEAT = game:GetService("RunService").Heartbeat
     local UNBREAKABLE_GRASS_POSITION = Vector3.new(6, -6, -141)
 
