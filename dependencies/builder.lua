@@ -7,9 +7,10 @@ local Builder = {}
 
 do
     local BLOCKS_FOLDER = game.ReplicatedStorage.Blocks
-    local PLACE_BLOCK = game.ReplicatedStorage.Remotes.Functions.CLIENT_BLOCK_PLACE_REQUEST
-    local EDIT_SIGN = game.ReplicatedStorage.Remotes.Functions.CLIENT_EDIT_SIGN
-    local PLOW_BLOCK = game.ReplicatedStorage.Remotes.Functions.CLIENT_PLOW_BLOCK_REQUEST
+    local remotePath = game.ReplicatedStorage.rbxts_include.node_modules.net.out:FindFirstChild('_NetManaged') or game.ReplicatedStorage.Remotes.Functions
+    local PLACE_BLOCK = remotePath.CLIENT_BLOCK_PLACE_REQUEST
+    local EDIT_SIGN = remotePath.CLIENT_EDIT_SIGN
+    local PLOW_BLOCK = remotePath.CLIENT_PLOW_BLOCK_REQUEST
 
     local Player = game.Players.LocalPlayer
 
